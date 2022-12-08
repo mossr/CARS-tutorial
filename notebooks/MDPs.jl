@@ -433,15 +433,13 @@ function plot_transition_probability(distr)
 		probs = distr.probs
 	end
 	xtick_states = [(v.x,v.y) for v in vals]
-	@info xtick_states
-	@info probs
 	cmap_probs = ColorScheme([colorant"#B3BCDB", colorant"#4063D8"])
 	bar(probs,
 		xformatter = x->1 <= x <= length(xtick_states) ? xtick_states[Int(x)] : "",
 		label=false,
 		aspect_ratio=5,
 		group=xtick_states,
-		color=map(v->get(cmap_probs, v), probs))
+		color=map(v->get(cmap_probs, v), probs)')
 	title!("Transition Probability\nDistribution")
 	xlabel!("next state 𝑠′")
 	ylabel!("probability")
