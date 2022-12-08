@@ -539,6 +539,7 @@ md"Create value iteration GIF? $(@bind create_gif CheckBox())"
 # ╔═╡ a2b7e745-8b15-42c6-89ca-e97aef1c9a0f
 md"""
 ## Reinforcement Learning Solvers
+> (**See background slides**)
 """
 
 # ╔═╡ a94529cf-1ab3-4b28-887a-04be9d103869
